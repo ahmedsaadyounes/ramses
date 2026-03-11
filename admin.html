@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة تحكم رمسيس</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div>
+        <div class="admin-logo">رمسيس</div>
+        <p class="admin-sub">لوحة تحكم تجريبية احترافية</p>
+      </div>
+      <nav class="admin-nav">
+        <button class="tab-btn active" data-tab="general">الهوية العامة</button>
+        <button class="tab-btn" data-tab="hero">الهيرو</button>
+        <button class="tab-btn" data-tab="mini">البطاقات الجانبية</button>
+        <button class="tab-btn" data-tab="colors">الألوان</button>
+        <button class="tab-btn" data-tab="notes">ملاحظات</button>
+      </nav>
+      <a href="index.html" class="back-site">↗ العودة للموقع</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <span class="admin-kicker">Ramses CMS Mockup</span>
+          <h1>لوحة تحكم رمسيس</h1>
+        </div>
+        <div class="admin-actions">
+          <button id="resetData" class="ghost-btn">إعادة الافتراضي</button>
+          <button id="saveData" class="primary-btn">حفظ التعديلات</button>
+        </div>
+      </header>
+
+      <section class="admin-grid">
+        <div class="panel tab-panel active" id="general">
+          <h2>الهوية العامة</h2>
+          <label>اسم الموقع
+            <input type="text" id="siteName" />
+          </label>
+          <label>وصف الموقع
+            <textarea id="siteTag"></textarea>
+          </label>
+        </div>
+
+        <div class="panel tab-panel" id="hero">
+          <h2>قسم الهيرو</h2>
+          <label>التصنيف
+            <input type="text" id="heroCategoryInput" />
+          </label>
+          <label>العنوان الرئيسي
+            <textarea id="heroTitleInput"></textarea>
+          </label>
+          <label>الوصف
+            <textarea id="heroDescInput"></textarea>
+          </label>
+          <label>رابط الصورة
+            <input type="text" id="heroImageInput" />
+          </label>
+        </div>
+
+        <div class="panel tab-panel" id="mini">
+          <h2>البطاقات الجانبية</h2>
+          <label>بطاقة 1
+            <input type="text" id="mini1Input" />
+          </label>
+          <label>بطاقة 2
+            <input type="text" id="mini2Input" />
+          </label>
+          <label>بطاقة 3
+            <input type="text" id="mini3Input" />
+          </label>
+        </div>
+
+        <div class="panel tab-panel" id="colors">
+          <h2>ألوان الواجهة</h2>
+          <label>اللون الأساسي
+            <input type="color" id="primaryColor" />
+          </label>
+          <label>لون الخلفية الداكنة
+            <input type="color" id="darkColor" />
+          </label>
+          <label>لون البطاقات الفاتحة
+            <input type="color" id="surfaceColor" />
+          </label>
+        </div>
+
+        <div class="panel tab-panel" id="notes">
+          <h2>مهم</h2>
+          <div class="note-box">
+            هذه اللوحة حالياً Front-end فقط وتخزن التعديلات داخل المتصفح عبر <strong>localStorage</strong>.
+            لاحقاً يمكن تحويلها إلى لوحة تحكم حقيقية بربطها مع Supabase أو Firebase أو أي Backend.
+          </div>
+        </div>
+
+        <div class="panel preview-panel">
+          <h2>معاينة سريعة</h2>
+          <div class="preview-card">
+            <span id="previewCategory">ملف خاص</span>
+            <h3 id="previewTitle">عنوان المقال الرئيسي</h3>
+            <p id="previewDesc">وصف قصير للغلاف الرئيسي في الصفحة.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

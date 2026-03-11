@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رمسيس | مقال</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-wrap">
+        <a class="menu-btn" href="index.html">←</a>
+        <div>
+          <div class="brand">رمسيس</div>
+          <div class="brand-sub" id="articleSub">صفحة مقال احترافية</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="lang-toggle" id="langToggle">EN</button>
+        <a class="admin-link" href="index.html" id="backHomeBtn">العودة للرئيسية</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-page">
+    <section class="article-hero" id="articleHero"></section>
+    <section class="section article-section">
+      <div class="container article-layout">
+        <article class="article-content-card">
+          <div class="article-body" id="articleBody"></div>
+        </article>
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <h3>Ramses</h3>
+            <p>واجهة قراءة نظيفة، خط واضح، وصورة غلاف كبيرة تعطي إحساس مجلة دولية.</p>
+          </div>
+          <div class="sidebar-card">
+            <h3 id="relatedTitle">مقالات ذات صلة</h3>
+            <div id="relatedList" class="related-list"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="article.js"></script>
+</body>
+</html>
