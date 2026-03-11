@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رمسيس | مجلة التاريخ والسياسة والتكنولوجيا</title>
+  <meta name="description" content="رمسيس — مجلة رقمية احترافية عن التاريخ والسياسة والتكنولوجيا باللغتين العربية والإنجليزية." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand-wrap">
+        <button class="menu-btn">☰</button>
+        <div>
+          <div class="brand" id="brandName">رمسيس</div>
+          <div class="brand-sub" id="brandTag">مجلة رقمية للتاريخ والسياسة والتكنولوجيا</div>
+        </div>
+      </div>
+
+      <div class="top-search-wrap desktop-only" id="topSearchWrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm0-2a8.5 8.5 0 1 0 5.33 15.13l4.02 4.02 1.41-1.41-4.02-4.02A8.5 8.5 0 0 0 10.5 2Z"/></svg>
+        <input id="topSearchInput" type="text" placeholder="ابحث داخل رمسيس..." />
+      </div>
+
+      <div class="top-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀</button>
+        <button class="lang-toggle" id="langToggle">EN</button>
+        <a class="admin-link" href="admin.html">لوحة التحكم</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-inner">
+      <a href="#home" data-i18n="home">الرئيسية</a>
+      <a href="#latest" data-i18n="latest">أحدث المقالات</a>
+      <a href="#news" data-i18n="news">أقسام الأخبار</a>
+      <a href="#about" data-i18n="about">من نحن</a>
+      <a href="#newsletter" data-i18n="newsletter">النشرة البريدية</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <article class="hero-main reveal visible floating-card" id="heroArticle"></article>
+        <div class="hero-side" id="heroSide"></div>
+      </div>
+    </section>
+
+    <section class="ticker-wrap reveal visible">
+      <div class="container">
+        <div class="ticker glass-panel">
+          <div class="ticker-label">رمسيس</div>
+          <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact-search-section mobile-only reveal visible">
+      <div class="container">
+        <div class="section-head mini-head">
+          <div>
+            <span class="section-kicker" data-i18n="search">بحث</span>
+            <h2 id="searchTitle">ابحث داخل رمسيس</h2>
+          </div>
+        </div>
+        <div class="search-box premium-input">
+          <input id="searchInputMobile" type="text" placeholder="ابحث عن مقال أو كلمة مفتاحية..." />
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="latest">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div>
+            <span class="section-kicker" data-i18n="latest">أحدث المقالات</span>
+            <h2 id="latestHeading">واجهة تحرير حديثة بمحتوى منظم</h2>
+          </div>
+          <p id="latestDesc">بطاقات احترافية مع صفحات داخلية مستقلة لكل مقال وتجربة قراءة نظيفة جدًا.</p>
+        </div>
+        <div class="cards-grid three" id="latestGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div>
+            <span class="section-kicker" data-i18n="news">أقسام الأخبار</span>
+            <h2 id="sectionsHeading">أقسام واضحة وسهلة التصفح</h2>
+          </div>
+          <p id="sectionsDesc">مقسمة إلى تاريخ وسياسة وتكنولوجيا مع إبراز مختلف لكل نوع محتوى.</p>
+        </div>
+        <div class="news-sections-grid" id="newsSections"></div>
+      </div>
+    </section>
+
+    <section class="section premium-split" id="about">
+      <div class="container split-grid">
+        <div class="about-card glass-panel reveal visible slide-up">
+          <span class="section-kicker" data-i18n="about">من نحن</span>
+          <h2 id="aboutTitle">رمسيس مجلة عربية حديثة بهوية فخمة</h2>
+          <p id="aboutText">نصنع تجربة تحريرية تربط التاريخ بالسياسة والتكنولوجيا بلغة صحفية أنيقة، وتصميم بصري يشعر القارئ بأنه داخل مجلة دولية حديثة.</p>
+          <div class="about-points">
+            <div class="about-point"><strong>01</strong><span id="aboutPoint1">هوية قوية قابلة للتوسع لاحقًا إلى مؤسسة إعلامية كاملة.</span></div>
+            <div class="about-point"><strong>02</strong><span id="aboutPoint2">واجهة ثنائية اللغة مناسبة للعربية والإنجليزية من البداية.</span></div>
+            <div class="about-point"><strong>03</strong><span id="aboutPoint3">بنية جاهزة لتوصيل Backend وCMS احترافي بعد ذلك.</span></div>
+          </div>
+        </div>
+        <div class="about-visual reveal visible scale-in">
+          <div class="about-stack">
+            <div class="floating-panel big">
+              <span class="mini-tag">Ramses</span>
+              <h3 id="aboutCardTitle">Editorial Identity</h3>
+              <p id="aboutCardText">A premium magazine structure for history, politics, and technology.</p>
+            </div>
+            <div class="floating-panel small panel-a"><span>History</span></div>
+            <div class="floating-panel small panel-b"><span>Politics</span></div>
+            <div class="floating-panel small panel-c"><span>Tech</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="newsletter">
+      <div class="container newsletter-shell reveal visible slide-up">
+        <div class="newsletter-copy">
+          <span class="section-kicker light" data-i18n="newsletter">النشرة البريدية</span>
+          <h2 id="newsletterTitle">اشترك ليصلك أفضل ما ينشره رمسيس</h2>
+          <p id="newsletterText">ملفات تحليلية مختارة، افتتاحيات قوية، ومقالات نوعية عن التاريخ والسياسة والتكنولوجيا.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault();window.handleNewsletterSubmit && window.handleNewsletterSubmit();">
+          <input id="newsletterInput" type="email" placeholder="اكتب بريدك الإلكتروني" />
+          <button type="submit" id="newsletterBtn">اشترك الآن</button>
+        </form>
+        <div class="newsletter-note" id="newsletterNote">هذه نسخة واجهة فقط حاليًا، وسيتم ربط الاشتراك الحقيقي لاحقًا.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer-top">
+      <div>
+        <div class="brand">رمسيس</div>
+        <p id="footerText">رمسيس — منصة عربية حديثة للتاريخ والسياسة والتكنولوجيا</p>
+      </div>
+      <div class="footer-links">
+        <a href="#latest">المقالات</a>
+        <a href="#news">الأقسام</a>
+        <a href="#about">من نحن</a>
+        <a href="admin.html">لوحة التحكم</a>
+      </div>
+    </div>
+    <div class="container social-row">
+      <a href="#" class="social-link">X / Twitter</a>
+      <a href="#" class="social-link">Instagram</a>
+      <a href="#" class="social-link">YouTube</a>
+      <a href="#" class="social-link">LinkedIn</a>
+      <a href="#" class="social-link">Telegram</a>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
